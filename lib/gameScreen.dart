@@ -98,7 +98,7 @@ class _GamescreenState extends State<Gamescreen> {
   }
 
   void moveObstacle() {
-    obstacleTimer = Timer.periodic(Duration(milliseconds: 50), (timer) {
+    obstacleTimer = Timer.periodic(const Duration(milliseconds: 50), (timer) {
       if (isGameOver) {
         timer.cancel();
         return;
@@ -170,14 +170,14 @@ class _GamescreenState extends State<Gamescreen> {
                 ),
                 for (int i = 0; i < obstaclePosition.length; i++)
                   AnimatedContainer(
-                    duration: Duration(milliseconds: 0),
+                    duration: const Duration(milliseconds: 0),
                     alignment: Alignment(obstaclePosition[i], 6),
                     child: Obstacle(
                       Image: 'Assets/png/small_wood/small_wood_spike_04.png',
                     ),
                   ),
                 if (isGameOver)
-                  Center(
+                  const Center(
                     child: Text(
                       'Game Over',
                       style: TextStyle(fontSize: 36, color: Colors.red),

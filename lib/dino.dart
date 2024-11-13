@@ -22,13 +22,13 @@ class _DinoState extends State<Dino> {
   @override
   Widget build(BuildContext context) {
     if (widget.dinoDirection == 'jump') {
-      return Container(
+      return SizedBox(
         // alignment: Alignment(widget.dinoX, widget.dinoY),
         width: 150,
         child: Image.asset('Assets/png/Jump/Jump${widget.dinoSpriteCount}.png'),
       );
     } else {
-      return Container(
+      return SizedBox(
         // alignment: Alignment(widget.dinoX, widget.dinoY),
         width: 150,
         child: Image.asset('Assets/png/Run/run${widget.dinoSpriteCount}.png'),
